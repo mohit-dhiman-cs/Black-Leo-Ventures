@@ -81,9 +81,16 @@ const Hero = () => {
             </div>
 
             {/* Floating Chat Bubble */}
-            <button className="fixed bottom-8 right-8 w-14 h-14 bg-[#FFD700] rounded-full shadow-lg flex items-center justify-center text-black z-50 hover:bg-[#F0C000] transition-colors">
+            {/* Floating Action Button */}
+            <a
+                href="https://api.whatsapp.com/send/?phone=917837059633&text=Hi%2C+I%27m+interested+in+learning+more+about+Black+Leo+Ventures.&type=phone_number&app_absent=0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="fixed bottom-8 right-8 w-14 h-14 bg-[#FFD700] rounded-full shadow-lg flex items-center justify-center text-black z-50 hover:bg-[#F0C000] transition-colors"
+                aria-label="Chat on WhatsApp"
+            >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
-            </button>
+            </a>
         </div>
     );
 };
