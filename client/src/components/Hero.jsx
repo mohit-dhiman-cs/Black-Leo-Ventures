@@ -55,15 +55,15 @@ const Hero = () => {
                                 <h3 className="text-[#FFD700] font-bold tracking-widest text-sm uppercase mb-6">Your Growth Partner</h3>
 
                                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                                    End-to-End Growth <br /> Partnership
+                                    Investor-Ready <br /> Transformation
                                 </h2>
 
                                 <p className="text-gray-400 text-sm leading-relaxed max-w-sm mx-auto mb-10">
-                                    Beyond funding, we guide you through MVP development, market validation, and scaling strategies to build a sustainable, investor-attractive business.
+                                    From pitch deck refinement to financial modeling, we prepare every aspect of your startup to meet investor expectations and close deals faster.
                                 </p>
 
                                 <button className="px-8 py-3 rounded-full bg-gradient-to-r from-[#FFD700]/10 to-[#FFD700]/5 border border-[#FFD700] text-[#FFD700] text-sm font-bold hover:bg-[#FFD700] hover:text-black transition-all duration-300">
-                                    Your Success is Our Mission
+                                    Complete Due Diligence Support
                                 </button>
 
                                 {/* Dots */}
