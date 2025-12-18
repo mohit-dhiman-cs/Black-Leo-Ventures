@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-white text-gray-900 dark:bg-dark-bg dark:text-light-text font-sans antialiased transition-colors duration-300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-display;
+}
+
+.text-shadow-outline {
+  -webkit-text-stroke: 1px #000;
+  color: #FFD700;
+}
+
+.dark .text-shadow-outline {
+  -webkit-text-stroke: 1px #fff;
+  color: #FFD700;
+}
