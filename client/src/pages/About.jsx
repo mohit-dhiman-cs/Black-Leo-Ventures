@@ -32,11 +32,10 @@ const About = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
                     {/* Logo */}
                     <a href="/" className="flex items-center gap-3 group">
-                        <img src="/lion-icon.png" alt="Black Leo" className="h-14 w-auto drop-shadow-md" />
-                        <div className="flex flex-col leading-none font-display font-bold tracking-tighter text-black dark:text-white">
-                            <span className="text-xl">BLACK LEO</span>
-                            <span className="text-bronze text-sm tracking-[0.2em]">VENTURES</span>
-                        </div>
+                        {/* Light Mode Logo */}
+                        <img src="/logo-light.png" alt="Black Leo Ventures" className="h-14 w-auto dark:hidden drop-shadow-md transform transition-transform group-hover:scale-105" />
+                        {/* Dark Mode Logo */}
+                        <img src="/logo-dark.png" alt="Black Leo Ventures" className="h-14 w-auto hidden dark:block drop-shadow-md transform transition-transform group-hover:scale-105" />
                     </a>
 
                     {/* Right Actions */}

@@ -27,14 +27,14 @@ const Navbar = () => {
     return (
         <nav className="fixed w-full z-50 bg-white/95 dark:bg-dark-bg/95 backdrop-blur-sm border-b border-gray-100 dark:border-white/10 transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-24">
-                    <div className="flex-shrink-0 flex items-center gap-2">
-                        <a href="#" className="flex items-center gap-3 group">
-                            <img src="/lion-icon.png" alt="Black Leo" className="h-16 w-auto transition-transform duration-300 group-hover:scale-105 drop-shadow-md" />
-                            <div className="flex flex-col leading-none font-display font-bold tracking-tighter text-black dark:text-white">
-                                <span className="text-2xl">BLACK LEO</span>
-                                <span className="text-bronze text-lg tracking-[0.2em]">VENTURES</span>
-                            </div>
+                <div className="flex items-center justify-between">
+                    {/* Logo */}
+                    <div className="flex-shrink-0 flex items-center">
+                        <a href="/" className="flex items-center gap-3 group">
+                            {/* Light Mode Logo (Black Text) */}
+                            <img src="/logo-light.png" alt="Black Leo Ventures" className="h-12 w-auto dark:hidden transition-transform group-hover:scale-105" />
+                            {/* Dark Mode Logo (White Text) */}
+                            <img src="/logo-dark.png" alt="Black Leo Ventures" className="h-12 w-auto hidden dark:block transition-transform group-hover:scale-105" />
                         </a>
                     </div>
                     <div className="hidden lg:block">
