@@ -35,8 +35,8 @@ const Home = () => {
             <FundingSystem />
             <PartnershipModels />
             <Commitment />
-            <FAQ />
             <CallToAction />
+            <FAQ />
 
             {/* Mission / Connect Section */}
             <div id="philosophy" className="py-24 bg-white dark:bg-dark-bg relative overflow-hidden transition-colors duration-300">
