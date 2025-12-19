@@ -34,8 +34,8 @@ const Home = () => {
             <FounderNote />
             <FundingSystem />
             <PartnershipModels />
-            <FAQ />
             <Commitment />
+            <FAQ />
             <CallToAction />
 
             {/* Mission / Connect Section */}
