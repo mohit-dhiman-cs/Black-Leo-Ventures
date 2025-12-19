@@ -75,7 +75,7 @@ const Services = () => {
 
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                     {services.map((service, index) => (
-                        <div key={index} className="bg-gray-50 border border-gray-200 dark:bg-[#1A1A1A] dark:border-white/5 p-10 rounded-3xl hover:border-[#B8860B]/30 dark:hover:border-gold/30 transition-all duration-300 group shadow-sm hover:shadow-md dark:shadow-none">
+                        <div key={index} className="flex flex-col items-center text-center bg-gray-50 border border-gray-200 dark:bg-[#1A1A1A] dark:border-white/5 p-10 rounded-3xl hover:border-[#B8860B]/30 dark:hover:border-gold/30 transition-all duration-300 group shadow-sm hover:shadow-md dark:shadow-none">
                             <div className="flex items-center justify-center h-16 w-16 rounded-2xl bg-[#B8860B]/10 text-[#B8860B] dark:bg-gold/10 dark:text-gold mb-8 group-hover:bg-[#B8860B] dark:group-hover:bg-gold group-hover:text-white dark:group-hover:text-black transition-colors duration-300">
                                 {React.cloneElement(service.icon, { className: "w-8 h-8 text-[#B8860B] dark:text-gold group-hover:text-white dark:group-hover:text-black transition-colors duration-300" })}
                             </div>
