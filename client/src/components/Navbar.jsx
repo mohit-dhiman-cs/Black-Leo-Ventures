@@ -96,40 +96,65 @@ const Navbar = () => {
             </div>
 
             {isOpen && (
-                <div className="md:hidden bg-white dark:bg-dark-bg border-b border-gray-200 dark:border-white/10 transition-colors duration-300">
-                    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                        {navLinks.map((link) => (
-                            <a
-                                key={link.name}
-                                href={link.href}
-                                className="text-gray-700 dark:text-gray-300 hover:text-lemon-green block px-3 py-2 rounded-md text-base font-medium transition-colors"
-                                onClick={() => setIsOpen(false)}
-                            >
-                                {link.name}
-                            </a>
-                        ))}
+                <div className="lg:hidden fixed inset-0 z-50 flex justify-end">
+                    {/* Backdrop */}
+                    <div
+                        className="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity"
+                        onClick={() => setIsOpen(false)}
+                    ></div>
 
-                        <div className="px-3 py-2">
+                    {/* Sidebar */}
+                    <div className="relative w-full max-w-xs bg-[#050505] h-full shadow-2xl p-6 flex flex-col border-l border-white/10">
+                        <div className="flex items-center justify-between mb-10">
+                            <h2 className="text-white text-lg font-bold">Navigation</h2>
                             <button
-                                onClick={() => {
-                                    document.documentElement.classList.toggle('dark');
-                                    localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
-                                }}
-                                className="flex items-center text-gray-700 dark:text-gray-300 hover:text-lemon-green transition-colors"
+                                onClick={() => setIsOpen(false)}
+                                className="text-gray-400 hover:text-white transition-colors"
                             >
-                                <span className="mr-2">Switch Theme</span>
-                                <svg className="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                                </svg>
-                                <svg className="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                                 </svg>
                             </button>
                         </div>
 
-                        <button className="w-full text-left bg-lemon-green text-black px-3 py-2 rounded-md font-bold hover:bg-black hover:text-lemon-green dark:hover:bg-white dark:hover:text-black transition-colors duration-300 mt-4">
-                            Apply for Funding
-                        </button>
+                        <div className="flex-1 overflow-y-auto space-y-6">
+                            {navLinks.map((link) => (
+                                <div key={link.name}>
+                                    {link.name === 'Company Profile' ? (
+                                        <a
+                                            href={link.href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center text-gray-400 hover:text-[#FFD700] transition-colors text-lg"
+                                            onClick={() => setIsOpen(false)}
+                                        >
+                                            <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                            </svg>
+                                            Company Profile
+                                        </a>
+                                    ) : (
+                                        <a
+                                            href={link.href}
+                                            className="block text-gray-400 hover:text-[#FFD700] text-lg transition-colors"
+                                            onClick={() => setIsOpen(false)}
+                                        >
+                                            {link.name}
+                                        </a>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className="mt-8">
+                            <a
+                                href="#contact"
+                                onClick={() => setIsOpen(false)}
+                                className="w-full flex items-center justify-center bg-[#FFD700] text-black py-4 rounded-lg font-bold hover:bg-[#F0C000] transition-colors duration-300"
+                            >
+                                Contact Us
+                            </a>
+                        </div>
                     </div>
                 </div>
             )}
