@@ -16,7 +16,7 @@ const Footer = () => {
                             Your startup growth partner - From idea to scale
                         </p>
                         <a
-                            href="https://calendly.com"
+                            href="https://api.whatsapp.com/send/?phone=917837059633&text=Hi%2C+I%27m+interested+in+booking+a+consultation+with+Black+Leo+Ventures.+Please+share+more+details.&type=phone_number&app_absent=0"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center px-6 py-3 bg-[#FFD700] text-black font-bold rounded-lg hover:bg-[#F0C000] transition-colors shadow-sm text-sm"
