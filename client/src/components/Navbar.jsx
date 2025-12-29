@@ -22,7 +22,7 @@ const Navbar = () => {
 
     const navLinks = [
         { name: 'Services', href: '#process' },
-        { name: 'Process', href: '#process' },
+        { name: 'Process', href: '#funding-system' },
         { name: 'Pricing', href: '#pricing' },
         { name: 'Case Studies', href: '#case-studies' },
         { name: 'Grants', href: 'https://getgrants.in/', external: true },
