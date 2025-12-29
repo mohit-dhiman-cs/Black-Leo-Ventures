@@ -15,6 +15,15 @@ const About = () => {
     // Scroll to top on mount
     useEffect(() => {
         window.scrollTo(0, 0);
+
+        // Initialize theme
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+            // Default to dark for this specific brand if no preference
+            if (!localStorage.theme) document.documentElement.classList.add('dark');
+        }
     }, []);
 
     const team = [
