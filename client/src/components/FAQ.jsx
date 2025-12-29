@@ -14,19 +14,19 @@ const FAQ = () => {
         },
         {
             question: "What's your fee structure?",
-            answer: "We believe in transparency. Our fee structure is designed to align with your success. We offer flexible models including fee-based, equity-based, and hybrid options, ensuring we grow only when you grow."
+            answer: "We believe in complete transparency. Our fee structure typically includes a modest upfront consulting fee for the pitch deck audit and strategy work, plus a success fee based on the funding secured. We align our incentives with your success - we only win when you win. Detailed pricing is provided during the initial consultation based on your specific needs and fundraising goals. No hidden fees, ever."
         },
         {
             question: "How do you protect my intellectual property and confidential information?",
-            answer: "We take confidentiality seriously. We act as your trusted partners and are happy to sign an NDA (Non-Disclosure Agreement) before deep-diving into your proprietary technology or business model. Your data and IP remain 100% yours."
+            answer: "Your IP and confidential information are sacred to us. We sign comprehensive NDAs with all clients before any information exchange. All investor introductions are made only with your explicit approval, and we never share your materials without your consent. Our team operates under strict confidentiality protocols, and we have robust systems in place to ensure your data security and privacy throughout the entire engagement."
         },
         {
             question: "Do you guarantee funding success?",
-            answer: "While no agency can ethically guarantee funding (as it depends on market conditions and investor decisions), we guarantee to maximize your chances. We ensure you are 100% investor-ready and put you in front of the right investors who are actively looking for deals in your sector."
+            answer: "While we cannot guarantee funding (no ethical advisor can), we have a strong track record with qualified startups that complete our full program. We conduct a thorough assessment during the audit phase to ensure your startup is truly ready for fundraising. If we identify gaps, we'll work with you to address them before approaching investors. Our comprehensive approach and curated network significantly improve your chances of securing the right investment partners."
         },
         {
             question: "What happens after I secure funding?",
-            answer: "Our relationship doesn't end with the check. We act as long-term growth partners, helping you navigate post-funding challenges, hiring, scaling operations, and preparing for subsequent funding rounds (Series A and beyond)."
+            answer: "Our relationship doesn't end at funding. We provide ongoing support through our 360° ecosystem, including connections to tech partners, marketing agencies, and operational consultants. Many of our clients return for subsequent funding rounds, and we're always here to provide strategic guidance as your startup scales. We're invested in your long-term success, not just the initial funding round."
         }
     ];
 
