@@ -15,6 +15,18 @@ const FAQ = () => {
         {
             question: "What's your fee structure?",
             answer: "We believe in transparency. Our fee structure is designed to align with your success. We offer flexible models including fee-based, equity-based, and hybrid options, ensuring we grow only when you grow."
+        },
+        {
+            question: "How do you protect my intellectual property and confidential information?",
+            answer: "We take confidentiality seriously. We act as your trusted partners and are happy to sign an NDA (Non-Disclosure Agreement) before deep-diving into your proprietary technology or business model. Your data and IP remain 100% yours."
+        },
+        {
+            question: "Do you guarantee funding success?",
+            answer: "While no agency can ethically guarantee funding (as it depends on market conditions and investor decisions), we guarantee to maximize your chances. We ensure you are 100% investor-ready and put you in front of the right investors who are actively looking for deals in your sector."
+        },
+        {
+            question: "What happens after I secure funding?",
+            answer: "Our relationship doesn't end with the check. We act as long-term growth partners, helping you navigate post-funding challenges, hiring, scaling operations, and preparing for subsequent funding rounds (Series A and beyond)."
         }
     ];
 
