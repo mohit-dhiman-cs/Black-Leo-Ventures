@@ -141,10 +141,10 @@ const About = () => {
                                 Let's discuss how Black Leo Ventures can help you secure funding and scale your business.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <a href="/#contact" className="px-8 py-3 bg-gold text-black font-bold rounded-md hover:bg-[#F0C000] transition-colors shadow-sm">
+                                <a href="https://api.whatsapp.com/send/?phone=917837059633&text=Hi%2C+I%27m+interested+in+booking+a+consultation+with+Black+Leo+Ventures.+Please+share+more+details.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-gold text-black font-bold rounded-md hover:bg-[#F0C000] transition-colors shadow-sm">
                                     Contact Us
                                 </a>
-                                <a href="https://api.whatsapp.com/send/?phone=917837059633&text=Hi%2C+I%27m+interested+in+booking+a+consultation+with+Black+Leo+Ventures.+Please+share+more+details.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-white dark:bg-transparent border border-gray-200 dark:border-gray-600 text-gray-900 dark:text-white font-bold rounded-md hover:bg-gray-50 dark:hover:bg-white/5 transition-colors shadow-sm">
+                                <a href="https://zcal.co/blackleoventures/30min" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-white dark:bg-transparent border border-gray-200 dark:border-gray-600 text-gray-900 dark:text-white font-bold rounded-md hover:bg-gray-50 dark:hover:bg-white/5 transition-colors shadow-sm">
                                     Schedule a Meeting
                                 </a>
                             </div>
