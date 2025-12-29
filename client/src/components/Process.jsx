@@ -51,16 +51,16 @@ const Process = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {advantages.map((item, index) => (
-                        <div key={index} className="bg-gray-50 dark:bg-[#151515] p-8 rounded-2xl hover:bg-gray-100 dark:hover:bg-[#1A1A1A] transition-colors duration-300 group shadow-sm dark:shadow-none">
-                            <div className="w-12 h-12 rounded-xl bg-gray-200 dark:bg-[#222] flex items-center justify-center text-black dark:text-gold mb-6 group-hover:bg-gold group-hover:text-black transition-colors duration-300">
+                        <div key={index} className="bg-[#1A1A1A] border border-white/5 p-6 rounded-xl hover:border-[#FFD700]/30 transition-all duration-300 group">
+                            <div className="w-10 h-10 rounded-lg bg-[#FFD700]/10 flex items-center justify-center text-[#FFD700] mb-4">
                                 {item.icon}
                             </div>
-                            <h3 className="text-xl font-bold text-black dark:text-white mb-3">
+                            <h3 className="text-lg font-bold text-white mb-2">
                                 {item.title}
                             </h3>
-                            <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                            <p className="text-gray-400 text-sm leading-relaxed">
                                 {item.description}
                             </p>
                         </div>
