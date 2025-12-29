@@ -77,7 +77,7 @@ const Hero = () => {
                     </div>
 
                     {/* Right Column - Card Visual */}
-                    <div className="relative">
+                    <div className="relative hidden lg:block">
                         <div className="bg-[#111] rounded-2xl p-2 shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500 border border-gray-800">
                             <div className="bg-[#0a0a0a] rounded-xl border border-gray-800 p-8 min-h-[400px] flex flex-col items-center justify-center text-center relative overflow-hidden transition-all duration-500">
                                 <div className="absolute top-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FFD700] to-transparent opacity-50"></div>
