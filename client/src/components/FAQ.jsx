@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const FAQ = () => {
-    const [openIndex, setOpenIndex] = useState(0);
+    const [openIndex, setOpenIndex] = useState(-1);
 
     const faqs = [
         {
