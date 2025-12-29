@@ -28,7 +28,7 @@ const ReadyToStart = () => {
                         </Link>
 
                         <a
-                            href="https://calendly.com"
+                            href="https://zcal.co/blackleoventures/30min"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-full sm:w-auto flex items-center justify-center px-8 py-4 bg-[#1a1a1a] text-white rounded-lg font-bold hover:bg-black transition-all duration-300 shadow-lg hover:shadow-xl"
