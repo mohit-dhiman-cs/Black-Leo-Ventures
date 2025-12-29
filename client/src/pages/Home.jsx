@@ -14,6 +14,8 @@ import CallToAction from '../components/CallToAction';
 import ReadyToStart from '../components/ReadyToStart';
 import Footer from '../components/Footer';
 
+import InspiringFacts from '../components/InspiringFacts';
+
 const Home = () => {
     return (
         <div className="bg-white dark:bg-dark-bg min-h-screen text-gray-900 dark:text-white transition-colors duration-300">
@@ -38,6 +40,7 @@ const Home = () => {
             <Commitment />
             <CallToAction />
             <FAQ />
+            <InspiringFacts />
 
             <ReadyToStart />
 
