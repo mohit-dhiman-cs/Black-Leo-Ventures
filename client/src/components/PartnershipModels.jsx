@@ -10,9 +10,10 @@ const PartnershipModels = () => {
             features: [
                 "Pitch deck audit & refinement",
                 "Investor introductions",
-                "Success based alignment",
+                "Success-based alignment",
                 "Transparent fee structure"
-            ]
+            ],
+            icon: "₹"
         },
         {
             tag: "Early-Stage Startups",
@@ -25,7 +26,7 @@ const PartnershipModels = () => {
                 "Long-term strategic partner",
                 "Aligned growth incentives"
             ],
-            highlight: true
+            icon: "%"
         },
         {
             tag: "Tailored Solutions",
@@ -37,7 +38,8 @@ const PartnershipModels = () => {
                 "Milestone-based structures",
                 "Hybrid fee + equity models",
                 "Case-by-case optimization"
-            ]
+            ],
+            icon: "⚙️"
         }
     ];
 
@@ -55,35 +57,33 @@ const PartnershipModels = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {models.map((model, index) => (
-                        <div key={index} className={`relative p-8 rounded-3xl border ${model.highlight ? 'border-[#FFD700] bg-gray-50 dark:bg-[#111]' : 'border-gray-200 dark:border-white/10 bg-white dark:bg-[#151515]'} hover:border-[#FFD700]/50 hover:shadow-xl dark:hover:shadow-none transition-all duration-300 flex flex-col`}>
+                        <div key={index} className="bg-[#1A1A1A] border border-white/5 p-8 rounded-2xl flex flex-col hover:border-[#FFD700]/30 transition-all duration-300 group">
                             <div className="mb-6">
-                                <span className={`text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-md ${model.highlight ? 'bg-[#FFD700] text-black' : 'bg-gray-200 dark:bg-[#333] text-gray-600 dark:text-gray-300'}`}>
+                                <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-md bg-[#333] text-gray-300">
                                     {model.tag}
                                 </span>
                             </div>
 
-                            <h3 className="text-2xl font-bold text-black dark:text-white mb-2 flex items-center gap-2">
-                                {model.highlight && (
-                                    <svg className="w-6 h-6 text-[#FFD700]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                                    </svg>
-                                )}
+                            <h3 className="text-2xl font-bold text-white mb-2 flex items-center gap-3">
+                                <span className="text-[#FFD700] text-3xl">{model.icon}</span>
                                 {model.title}
                             </h3>
-                            <p className="text-gray-500 dark:text-gray-400 text-sm mb-6 h-10">
+                            <p className="text-gray-400 text-sm mb-6 h-10 flex items-center">
                                 {model.subtitle}
                             </p>
 
-                            <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed mb-8 flex-grow">
+                            <p className="text-gray-300 text-base leading-relaxed mb-8 flex-grow">
                                 {model.description}
                             </p>
 
-                            <div className="space-y-3 mt-auto">
+                            <div className="space-y-3 mt-auto border-t border-white/10 pt-6">
                                 {model.features.map((feature, i) => (
-                                    <div key={i} className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400">
-                                        <svg className="w-5 h-5 text-[#FFD700] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                        </svg>
+                                    <div key={i} className="flex items-center gap-3 text-sm text-gray-300">
+                                        <div className="w-5 h-5 rounded-full border border-[#FFD700] flex items-center justify-center flex-shrink-0 text-[#FFD700]">
+                                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </div>
                                         <span>{feature}</span>
                                     </div>
                                 ))}
