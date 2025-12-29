@@ -1,6 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Hero = () => {
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const slides = [
+        {
+            title: "Your Growth Partner",
+            heading: "Investor-Ready Transformation",
+            text: "From pitch deck refinement to financial modeling, we prepare every aspect of your startup to meet investor expectations and close deals faster.",
+            button: "Complete Due Diligence Support"
+        },
+        {
+            title: "Your Growth Partner",
+            heading: "Strategic Fundraising",
+            text: "We connect ambitious startups with the right investors, ensuring every introduction is targeted, meaningful, and aligned with your growth stage.",
+            button: "Direct Access to Vetted Capital"
+        },
+        {
+            title: "Your Growth Partner",
+            heading: "End-to-End Growth Partnership",
+            text: "Beyond funding, we guide you through MVP development, market validation, and scaling strategies to build a sustainable, investor-attractive business.",
+            button: "Your Success is Our Mission"
+        }
+    ];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % slides.length);
+        }, 5000); // Shift every 5 seconds
+        return () => clearInterval(interval);
+    }, [slides.length]);
+
     return (
         <div className="relative bg-white dark:bg-dark-bg overflow-hidden min-h-screen flex items-center transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20 w-full">
@@ -49,28 +79,39 @@ const Hero = () => {
                     {/* Right Column - Card Visual */}
                     <div className="relative">
                         <div className="bg-[#111] rounded-2xl p-2 shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500 border border-gray-800">
-                            <div className="bg-[#0a0a0a] rounded-xl border border-gray-800 p-8 min-h-[400px] flex flex-col items-center justify-center text-center relative overflow-hidden">
+                            <div className="bg-[#0a0a0a] rounded-xl border border-gray-800 p-8 min-h-[400px] flex flex-col items-center justify-center text-center relative overflow-hidden transition-all duration-500">
                                 <div className="absolute top-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FFD700] to-transparent opacity-50"></div>
 
-                                <h3 className="text-[#FFD700] font-bold tracking-widest text-sm uppercase mb-6">Your Growth Partner</h3>
+                                <div className="animate-fadeIn w-full" key={currentSlide}>
+                                    <h3 className="text-[#FFD700] font-bold tracking-widest text-sm uppercase mb-6">{slides[currentSlide].title}</h3>
 
-                                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                                    Investor-Ready <br /> Transformation
-                                </h2>
+                                    <h2 className="text-3xl md:text-3xl font-bold text-white mb-6 leading-tight">
+                                        {slides[currentSlide].heading.split(' ').map((word, i) => (
+                                            <React.Fragment key={i}>
+                                                {word} {i === 1 && <br />}
+                                            </React.Fragment>
+                                        ))}
+                                    </h2>
 
-                                <p className="text-gray-400 text-sm leading-relaxed max-w-sm mx-auto mb-10">
-                                    From pitch deck refinement to financial modeling, we prepare every aspect of your startup to meet investor expectations and close deals faster.
-                                </p>
+                                    <p className="text-gray-400 text-sm leading-relaxed max-w-sm mx-auto mb-10 h-20">
+                                        {slides[currentSlide].text}
+                                    </p>
 
-                                <button className="px-8 py-3 rounded-full bg-gradient-to-r from-[#FFD700]/10 to-[#FFD700]/5 border border-[#FFD700] text-[#FFD700] text-sm font-bold hover:bg-[#FFD700] hover:text-black transition-all duration-300">
-                                    Complete Due Diligence Support
-                                </button>
+                                    <button className="px-6 py-3 rounded-full bg-gradient-to-r from-[#FFD700]/10 to-[#FFD700]/5 border border-[#FFD700] text-[#FFD700] text-sm font-bold hover:bg-[#FFD700] hover:text-black transition-all duration-300 w-full max-w-xs whitespace-nowrap overflow-hidden text-ellipsis">
+                                        {slides[currentSlide].button}
+                                    </button>
+                                </div>
 
                                 {/* Dots */}
                                 <div className="mt-8 flex gap-2">
-                                    <div className="w-2 h-2 rounded-full bg-gray-600"></div>
-                                    <div className="w-2 h-2 rounded-full bg-gray-600"></div>
-                                    <div className="w-8 h-2 rounded-full bg-[#FFD700]"></div>
+                                    {slides.map((_, index) => (
+                                        <button
+                                            key={index}
+                                            onClick={() => setCurrentSlide(index)}
+                                            className={`h-2 rounded-full transition-all duration-300 ${currentSlide === index ? 'w-8 bg-[#FFD700]' : 'w-2 bg-gray-600'}`}
+                                            aria-label={`Go to slide ${index + 1}`}
+                                        />
+                                    ))}
                                 </div>
 
                                 <div className="absolute bottom-4 right-4 w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
@@ -80,7 +121,6 @@ const Hero = () => {
                 </div>
             </div>
 
-            {/* Floating Chat Bubble */}
             {/* Floating Action Button */}
             <a
                 href="https://api.whatsapp.com/send/?phone=917837059633&text=Hi%2C+I%27m+interested+in+learning+more+about+Black+Leo+Ventures.&type=phone_number&app_absent=0"
