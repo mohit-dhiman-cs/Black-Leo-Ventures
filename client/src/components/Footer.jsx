@@ -32,10 +32,10 @@ const Footer = () => {
                     <div>
                         <h4 className="text-black dark:text-white font-bold mb-6 text-lg">Services</h4>
                         <ul className="space-y-4">
-                            <li><a href="#services" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-sm">Funds for Startups</a></li>
-                            <li><a href="#grants" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-sm">Grants & Incubation</a></li>
-                            <li><a href="#deal-origination" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-sm">Deal Origination</a></li>
-                            <li><a href="#ma-advisory" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-sm">M&A Advisory</a></li>
+                            <li><a href="#process" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-sm">Funds for Startups</a></li>
+                            <li><a href="#process" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-sm">Grants & Incubation</a></li>
+                            <li><a href="#process" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-sm">Deal Origination</a></li>
+                            <li><a href="#process" className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors text-sm">M&A Advisory</a></li>
                         </ul>
                     </div>
 
